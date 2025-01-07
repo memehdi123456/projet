@@ -1,21 +1,25 @@
+
+
+########## ########## ##########  PROJET 1 ########## ########## ##########
+
 import random
 from question import Question
 
 class Quiz:
     def __init__(self, questions):
-        """
-        Initialise le QCM.
-        :param questions: Liste d'objets Question.
-        """
+
+        ##########      Initialise le QCM.  ##########
+
+
         self.questions = questions
         random.shuffle(self.questions)
         self.score = 0
         self.user_answers = []
 
     def ask_questions(self):
-        """
-        Pose les questions au participant.
-        """
+
+        ############    Pose les questions au participant.  ##########
+
         for index, question in enumerate(self.questions):
             print(f"Question {index + 1}: {question.text}")
             for i, choice in enumerate(question.choices):
@@ -31,9 +35,9 @@ class Quiz:
                 self.score += 1
 
     def show_results(self):
-        """
-        Affiche le score et le corrigé.
-        """
+
+        ##########    Affiche le score et le corrigé.   ##########
+
         print("\n--- Résultats ---")
         print(f"Votre score : {self.score}/{len(self.questions)}")
         print("\n--- Corrigé ---")
