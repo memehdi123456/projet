@@ -12,3 +12,4 @@ Clonez le dépôt GitLab et installez les dépendances si nécessaires.
 
 ## Tests
 Lancez les tests unitaires avec la commande :
+python -m unittest test_quiz.py
