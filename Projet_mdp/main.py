@@ -7,8 +7,8 @@ from mdp_generateur import PasswordGenerator
 from phrase_generateur import PassphraseGenerator
 
 if __name__ == "__main__":
-    
-    print("Bienvenue dans le programme de gestion des mots de passe")
+
+    print("Gestion mdp")
     print("1. Tester un mot de passe")
     print("2. Générer un mot de passe")
     print("3. Générer une passphrase")
