@@ -1,12 +1,22 @@
+########## ########## ##########  PROJET 2 ########## ########## ##########
+
+
 import random
 
-class PhraseGenerateur:
-    @staticmethod
-    def generate_passphrase(word_list, num_words=4):
-        """
-        Génère une passphrase à partir d'une liste de mots et du nombre souhaité.
-        """
-        if not word_list:
-            raise ValueError("La liste de mots ne doit pas être vide.")
+class PassphraseGenerator:
+######## generation passphrase depuis fichier eff wordlist #########
 
-        return ' '.join(random.choices(word_list, k=num_words))
+    @staticmethod
+    def load_wordlist(filepath):
+        wordlist = {}
+        with open(filepath, 'r') as file:
+            for line in file:
+                parts = line.strip().split('\t')
+                if len(parts) == 2:
+                    wordlist[parts[0]] = parts[1]
+        return wordlist
+
+    @staticmethod
+    def generate_passphrase(wordlist, num_words):
+        dice_rolls = list(wordlist.keys())
+        return ' '.join(wordlist[random.choice(dice_rolls)] for _ in range(num_words))
