@@ -1,4 +1,4 @@
-# QCM Python
+# Projet 1
 
 ## Exécution
 1. Lancez le fichier `main.py` pour démarrer le quiz.
