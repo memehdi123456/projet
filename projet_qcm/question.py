@@ -2,18 +2,19 @@
 
 ########## ########## ##########  PROJET 1 ########## ########## ##########
 
+import random
 
 class Question:
-    def __init__(self, text, choices, correct_choice):
+    def __init__(self, question_text, choices, correct_choice):
+
 
         ##########  Initialise une question.    ##########
 
-        self.text = text
+        self.question_text = question_text
         self.choices = choices
-        self.correct_choice = correct_choice
+        self.correct_choice = correct_choice.lower()
 
-    def is_correct(self, answer):
-
+    def is_correct(self, choice):
         ##########  Vérifie si une réponse est correcte.    ##########
-
-        return answer == self.correct_choice
+        
+        return choice.lower() == self.correct_choice
