@@ -21,7 +21,7 @@ class Quiz:
         ############    Pose les questions au participant.  ##########
 
     def start(self):
-        print("Salut, bienvenue dans mon quiz Python débutant ! Répondez aux questions en écrivant a, b ou c.\n")
+        print("Répondez aux questions en écrivant a, b ou c.\n")
         self.shuffle_questions()
         for index, question in enumerate(self.questions):
             print(f"Question {index + 1}: {question.question_text}")
@@ -39,6 +39,6 @@ class Quiz:
                 self.score += 1
             else:
                 correct_index = ord(question.correct_choice) - 97
-                print(f"Dommage ! La bonne réponse était {question.correct_choice}) {question.choices[correct_index]}\n")
+                print(f"Dommage la bonne réponse était {question.correct_choice}) {question.choices[correct_index]}\n")
 
-        print(f"Super, c'est fini ! Tu as obtenu {self.score} bonne(s) réponse(s) sur {len(self.questions)}.")
+        print(f"Tu as obtenu {self.score} bonne(s) réponse(s) sur {len(self.questions)}.")
