@@ -32,7 +32,7 @@ class Quiz:
 
             user_answer = input("Votre réponse (a, b, c) : ").lower()
             while user_answer not in ['a', 'b', 'c']:
-                user_answer = input("Oups, réponse invalide. Réessayez (a, b, c) : ").lower()
+                user_answer = input("Réponse invalide. Réessayez (a, b, c) : ").lower()
 
             if question.is_correct(user_answer):
                 print("Bravo, c'est correct !\n")
