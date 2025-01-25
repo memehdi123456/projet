@@ -1,14 +1,14 @@
-Projet 2
+#Projet 2
 
-#Description
+##Description
 Le projet permet de:
 
-Tester la force des mots de passe.
-Générer des mots de passe sécurisés.
-Créer des passphrases basées sur une wordlist.
+1.Tester la force des mots de passe.
+2.Générer des mots de passe sécurisés.
+3.Créer des passphrases basées sur une wordlist.
 
-#Lancez le programme :
-python main.py
+##Lancez le programme :
+python `main.py`
 
-#Exécutez les tests unitaires :
-python -m unittest test_mdp.py
+##Exécutez les tests unitaires :
+`python -m unittest test_mdp.py`
