@@ -6,8 +6,8 @@ from phrase_generateur import PassphraseGenerator
 class TestPasswordTester(unittest.TestCase):
     def test_entropy_calculation(self):
 
-        self.assertAlmostEqual(PasswordTester.calculate_entropy("abc"), 14.08, places=2)
-        self.assertAlmostEqual(PasswordTester.calculate_entropy("ABC123!"), 41.31, places=2)
+        self.assertAlmostEqual(PasswordTester.calculate_entropy("abc"), 14.10, places=2)
+        self.assertAlmostEqual(PasswordTester.calculate_entropy("ABC123!"), 42.61, places=2)
 
     def test_assess_strength(self):
 

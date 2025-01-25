@@ -18,8 +18,8 @@ class PasswordTester:
         if any(c.isupper() for c in password):
             pool_size += 26
         if any(c.isdigit() for c in password):
-            poolsize += 10
-        if any(c in '!@#$%^&*()-=+[]{}|;:'",.<>?/`~' for c in password):
+            pool_size += 10
+        if any(c in '!@#$%^&*()-=+[]{}|;:",.<>?/`~' for c in password):
             pool_size += 32
 
 
